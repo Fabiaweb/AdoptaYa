@@ -12,6 +12,8 @@
     --color-7: #e6e6e6;
     --color-8: #f0f0f0;
     --color-9: #ffe53c;
+    --color-10: #81b0c4;
+    --color-11: #0e2e3b;
     --footer-color-1: #94c6db;
     --footer-color-2: #fc6b1d;
     --footer-color-3: #1d67fc;
@@ -51,11 +53,11 @@
     transition: .5s ease-in-out;
 }
 
-.nav_item:first-of-type{
+.nav_item:nth-of-type(2){
     color: var(--color-2);
 }
 
-.nav_item:first-of-type:hover{
+.nav_item:nth-of-type(2):hover{
     color: var(--color-2);
 }
 
@@ -110,111 +112,221 @@
     display: flex;
 }
 
-/* art of meet them */
-
-.conocelos{
+.program{
     width: 100%;
     height: 100%;
 }
 
-.conocelos_container{
+.program_container{
     width: 90%;
     height: 100%;
     margin: 0 auto;
+    margin-top: 2.5rem;
+}
+
+.style_title{
+    color: var(--color-10);
+    font-size: 2.3em;
+    margin-bottom: 1.3rem;
+}
+
+.description_style{
+    color: var(--color-11);
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
 }
 
 .img_container{
-    width: 80%;
-    margin: 1rem auto;
-    height: 100%;
-}
-
-.cartas_img-1{
-    width: 100%;
-    height: 25rem;
-}
-
-.cartas_img-2{
     width: 95%;
-    height: 23rem;
+    height: 430px;
+    margin: 1rem auto;
 }
 
-.conocelos_container img{
+.img{
     width: 100%;
     height: 100%;
 }
 
-.btn_container{
-    margin: 0 auto;
-    width: 90%;
+.fab_icons{
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.5rem;
-    margin-bottom: 1.2rem;
+    position: absolute;
+    margin-top: -4rem;
+    right: 2.5%;
 }
 
-.style_btn{
+.fa-paw{
+    font-size: 5.5em;
+    color: var(--color-4);
+    transform: rotate(-45deg);
+}
+
+.program_atributes{
+    width: 90%;
+    height: 100%;
+    margin: 3.5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question_style{
+    color: var(--color-11);
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.atributes_style{
+    color: var(--color-11);
+    margin-bottom: 1rem;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+.atributes_style:first-of-type{
+    position: relative;
+    left: 2.2%;
+}
+
+.atributes_style:last-of-type{
+    position: relative;
+    left: 3.1%;
+}
+
+.program_process{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.program_process h2{
+    text-align: center;
+}
+
+.steps{
+    background: var(--color-9);
+    width: 140px;
+    position: absolute;
+    height: 150px;
+    padding-top: 13px;
+    border-radius: 0 0 50px 0;
+}
+
+.steps h2{
+    color: var(--color-3);
+    font-size: 2.5em;
+}
+
+.img_2{
+    width: 100%;
+    height: 23.5rem;
+}
+
+.program_requirements{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: -2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.requirements_style{
+    color: var(--color-11);
+    font-size: 1.4em;
+    margin-bottom: 1rem;
+}
+
+.program_must{
+    width: 90%;
+    height: 100%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.program_must ul li{
+    font-size: 1.3em;
+    margin-bottom: 1rem;
+}
+
+.program_add{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.fab_icons_star{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-top: -2rem;
+    left: 0.5rem;
+    justify-content: center;
+}
+
+.fab_icons_star i{
+    font-size: 2.5em;
+    color: var(--color-9);
+    transform: rotate(45deg);
+}
+
+.title-2{
+    text-align: center;
+}
+
+.btn_container{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_style{
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
     padding: 10px 30px;
     background: var(--color-1);
     font-size: 1em;
+    text-decoration: none;
+    color: var(--color-3);
     transition: all .3s ease-in-out;
 }
 
-.style_btn:hover{
+.btn_style:hover{
     background: var(--color-4);
 }
 
-.style_title{
-    background: var(--color-1);
-    display: inline-flex;
-    padding: 5px 25px;
-    color: var(--color-3);
+.img_container-2{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    height: 400px;
 }
 
-.question_style{
-    color: var(--color-1);
-    font-size: 2.5em;
-    text-align: center;
+.img_container-2 img{
+    width: 100%;
+    height: 100%;
 }
-
-.fab_icons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    margin-top: -8.5rem;
-    right: 5%;
-}
-
-.fa-star{
-    color: var(--color-9);
-    font-size: 2.3em;
-    rotate: -45deg;
-    top: 0;
-}
-
-.description_style{
-    color: var(--color-5);
-    text-align: left;
-    font-weight: 400;
-    font-size: 1.1em;
-    margin: 1.5rem;
-}
-
-.conocelos_title{
-    margin-top: 1.5rem;
-    margin-left: 0.5rem;
-    margin-bottom: 0.8rem;
-    text-transform: uppercase;
-}
-
-/* footer section */
 
 .footer{
     width: 100%;
