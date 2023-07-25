@@ -29,6 +29,8 @@
 /* navbar section */
 
 .nav{
+    --state-menu: scale(1);
+    --state-close: scale(0);
     background: var(--color-1);
     width: 100%;
     height: 70px;
@@ -65,8 +67,16 @@
     color: var(--color-8);
 }
 
+.nav_menu{
+    transform: var(--state-menu);
+    transition: .4s transform;
+}
+
 .nav_close{
-    display: none;
+    position: absolute;
+    opacity: 0;
+    transform: var(--state-close);
+    transition: .4s transform;
 }
 
 .nav_input{
@@ -80,11 +90,14 @@
 }
 
 .nav_input:checked ~ .nav_menu{
-    display: none;
+    --state-menu: scale(0);
 }
 
 .nav_input:checked ~ .nav_close{
     display: flex;
+    --state-close: scale(1);
+    position: unset;
+    opacity: 1;
     z-index: 3;
     flex-direction: row;
     justify-content: center;
@@ -112,6 +125,8 @@
     display: flex;
 }
 
+/* program section foster toy */
+
 .program{
     width: 100%;
     height: 100%;
@@ -138,9 +153,10 @@
 }
 
 .img_container{
-    width: 95%;
-    height: 430px;
+    width: 92%;
+    height: 400px;
     margin: 1rem auto;
+    margin-bottom: 3rem;
 }
 
 .img{
@@ -156,7 +172,7 @@
     justify-content: center;
     position: absolute;
     margin-top: -4rem;
-    right: 2.5%;
+    right: 4%;
 }
 
 .fa-paw{
@@ -275,7 +291,7 @@
     align-items: center;
     position: absolute;
     margin-top: -2rem;
-    left: 0.5rem;
+    left: 2.5%;
     justify-content: center;
 }
 
@@ -316,17 +332,12 @@
     background: var(--color-4);
 }
 
-.img_container-2{
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    height: 400px;
+.img_bottom{
+    width: 100%;
+    margin-bottom: 8rem;
 }
 
-.img_container-2 img{
-    width: 100%;
-    height: 100%;
-}
+/* footer section */
 
 .footer{
     width: 100%;

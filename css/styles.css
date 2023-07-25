@@ -12,6 +12,8 @@
     --color-7: #e6e6e6;
     --color-8: #f0f0f0;
     --color-9: #ffe53c;
+    --color-10: #81b0c4;
+    --color-11: #0e2e3b;
     --footer-color-1: #94c6db;
     --footer-color-2: #fc6b1d;
     --footer-color-3: #1d67fc;
@@ -27,6 +29,8 @@
 /* navbar section */
 
 .nav{
+    --state-menu: scale(1);
+    --state-close: scale(0);
     background: var(--color-1);
     width: 100%;
     height: 70px;
@@ -63,8 +67,16 @@
     color: var(--color-8);
 }
 
+.nav_menu{
+    transform: var(--state-menu);
+    transition: .4s transform;
+}
+
 .nav_close{
-    display: none;
+    position: absolute;
+    opacity: 0;
+    transform: var(--state-close);
+    transition: .4s transform;
 }
 
 .nav_input{
@@ -78,11 +90,14 @@
 }
 
 .nav_input:checked ~ .nav_menu{
-    display: none;
+    --state-menu: scale(0);
 }
 
 .nav_input:checked ~ .nav_close{
     display: flex;
+    --state-close: scale(1);
+    position: unset;
+    opacity: 1;
     z-index: 3;
     flex-direction: row;
     justify-content: center;
@@ -121,6 +136,20 @@
     width: 90%;
     height: 100%;
     margin: 0 auto;
+}
+
+.style_title{
+    background: var(--color-1);
+    display: inline-flex;
+    padding: 5px 25px;
+    color: var(--color-3);
+}
+
+.conocelos_title{
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
 }
 
 .img_container{
@@ -168,17 +197,18 @@
     background: var(--color-4);
 }
 
-.style_title{
-    background: var(--color-1);
-    display: inline-flex;
-    padding: 5px 25px;
-    color: var(--color-3);
-}
-
 .question_style{
     color: var(--color-1);
     font-size: 2.5em;
     text-align: center;
+}
+
+.description_style{
+    color: var(--color-5);
+    text-align: left;
+    font-weight: 400;
+    font-size: 1.1em;
+    margin: 1.5rem;
 }
 
 .fab_icons{
@@ -197,21 +227,6 @@
     font-size: 2.3em;
     rotate: -45deg;
     top: 0;
-}
-
-.description_style{
-    color: var(--color-5);
-    text-align: left;
-    font-weight: 400;
-    font-size: 1.1em;
-    margin: 1.5rem;
-}
-
-.conocelos_title{
-    margin-top: 1.5rem;
-    margin-left: 0.5rem;
-    margin-bottom: 0.8rem;
-    text-transform: uppercase;
 }
 
 /* footer section */
